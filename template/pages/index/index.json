@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "news": "/pages/video/home/home",
+    "about": "/pages/about/home/home"
+  }
+}

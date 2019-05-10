@@ -1,0 +1,10 @@
+<!--搜索无结果页面-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">搜索错误</view>
+</cu-custom>
+<view class="container">
+	<view class="cu-avatar xl" style="background-image:url(https://image.weilanwl.com/img/square-4.jpg);"></view>
+	<view class="text1">没有搜索结果</view>
+	<view class="text2">没有找到相关的信息</view>
+</view>

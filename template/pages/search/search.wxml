@@ -1,0 +1,16 @@
+<!--pages/search/search.wxml-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">搜索页面</view>
+</cu-custom>
+<scroll-view scroll-y class="scrollPage">
+	<view class="cu-bar bg-white solid-bottom margin-top">
+		<view class="action">
+			<text class="icon-title text-blue"></text>"{{authorsName}}"的搜索结果
+		</view>
+	</view>
+	<view class="padding bg-white">
+		<view class="text-left padding">诗人: {{name}}</view>
+		<view class="text-center padding">介绍: {{desc}}</view>
+	</view>
+</scroll-view>

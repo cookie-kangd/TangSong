@@ -1,0 +1,37 @@
+.active {
+  font-size: 39rpx;
+  font-weight: bold;
+}
+
+.iconRight {
+	position: relative;
+	left: 150%;
+}
+
+.base {
+	background: #F5F5F5;
+}
+
+.item {
+  padding-left: 40rpx;
+  padding-bottom: 24rpx;
+}
+
+.foorerText {
+  width: 95%;
+  color: #ccc;
+  font-size: 24rpx;
+  display: flex;
+  justify-content: center;
+	margin-bottom: 100rpx;
+}
+
+.textRight1 {
+	position: relative;
+	left: 80%;
+}
+
+.textRight2 {
+	position: relative;
+	left: 70%;
+}

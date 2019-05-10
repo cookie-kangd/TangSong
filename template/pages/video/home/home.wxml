@@ -1,0 +1,25 @@
+<cu-custom bgColor="bg-gradual-blue">
+	<view slot="content">新闻一刻</view>
+</cu-custom>
+<scroll-view scroll-y class="scrollPage">
+<view class="cu-card case {{ isCard ? 'no-card' : ''}}">
+  <view class="cu-item shadow" wx:for="{{videoList}}" wx:key>
+    <view class='image' catchtap="jumpPro" style="height: auto;width: 100%;">
+			<image src="{{item.picInfo[0].url}}" mode="widthFix" style="width: 100%;heihgt: auto;"></image>
+    </view>
+    <view class="cu-list menu menu-avatar">
+      <view class="cu-item">
+        <view class='content flex-sub'>
+          <view class='text-black text-lg1 flex justify-between' style="margin-top: 6%;">
+            {{item.title}}
+            <view class="text-black text-lg2" style="margin-left: 35%;">
+            {{item.ptime}}
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+</scroll-view>
+<view class='item foorerText' bindtap="goToTop">已到底部,点我返回顶部</view>

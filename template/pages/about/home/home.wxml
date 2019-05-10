@@ -1,0 +1,26 @@
+<cu-custom bgColor="bg-gradual-blue">
+	<view slot="content">关于</view>
+</cu-custom>
+<scroll-view scroll-y class="scrollPage">
+	<view class="UCenter-bg bg-gradual-blue">
+		<view class="text-xl">学习唐诗宋词demo
+		</view>
+		<image src="https://image.weilanwl.com/gif/wave.gif" mode="scaleToFill" class="gif-wave"></image>
+	</view>
+	<view class="padding flex text-center text-grey bg-white shadow-warp">
+		<view class="flex flex-sub flex-direction solid-right">
+			<view class="text-xxl text-blue" bindtap="CopyLink" data-link="https://github.com/a85115695/TangSong">如果觉得不错，请给我来个star噢</view>
+			<view class="margin-top-sm">
+				<text class="icon-favorfill" bindtap="CopyLink" data-link="https://github.com/a85115695/TangSong"></text> Star</view>
+		</view>
+	</view>
+	<view class='margin-xl bg-white padding-xl radius shadow-lg'>
+		<view class='text-center margin-bottom text-xxl  text-grey'>关于学习唐诗宋词demo</view>
+		<view class='text-content'>
+			<view>Hi！欢迎来到学习唐诗宋词demo！</view>
+			<view class='margin-top-sm'>项目是开源的，新手可以学习一下结构的写法，如果这个项目有帮到你，或者你觉得很赞，可以在GitHub点个star支持一下！</view>
+			<view class='margin-top-sm'>我的Github:https://www.github.com/a85115695</view>
+			<view class='margin-top-sm'>我的简书:https://www.jianshu.com/u/3aa2ddd97440</view>
+		</view>
+	</view>
+</scroll-view>

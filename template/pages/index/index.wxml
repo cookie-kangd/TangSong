@@ -1,0 +1,64 @@
+<cu-custom bgColor="bg-gradual-blue" wx:if="{{PageCur=='index'}}">
+	<view slot="content">学习中华唐诗宋词</view>
+</cu-custom>
+<news wx:if="{{PageCur=='video'}}" videoList="{{videoList}}"></news>
+<about wx:if="{{PageCur=='about'}}"></about>
+<view class="box" wx:if="{{PageCur=='index'}}">
+	<view class="cu-bar search bg-white">
+		<open-data type="userAvatarUrl" class="cu-avatar round" style="background-image:url({{userInfo.avatarUrl}});"></open-data>
+		<view class="search-form round">
+			<text class="icon-search"></text>
+			<input type="text" placeholder="搜索诗人名" confirm-type="search" maxlength="3" bindinput="getInput"></input>
+		</view>
+		<view class="action">
+			<button class="cu-btn bg-green shadow-blur round" catchtap="searchPom">搜索</button>
+		</view>
+	</view>
+</view>
+<view class="padding-xl radius shadow-blur bg-red margin-top bg-img text-center" style="background-image:url(https://image.weilanwl.com/img/square-3.jpg);" wx:if="{{PageCur=='index'}}"><view>广告位</view></view>
+<scroll-view scroll-y class="scrollPage" wx:if="{{PageCur=='index'}}">
+<view class="cu-bar bg-white solid-bottom margin-top" wx:if="{{PageCur=='index'}}">
+  <view class="action">
+    <text class="icon-title text-blue"></text>每日诗词推荐<text class="icon-refresh text-green iconRight" catchtap="refresh"></text>
+  </view>
+</view>
+<view class="padding bg-white" wx:if="{{PageCur=='index'}}">
+  <view class="text-left padding">诗词名: {{dailyTitle}}</view>
+  <view class="text-center padding">{{dailyContent}}</view>
+  <view class="text-right padding">作者: {{dailyAuthors}}</view>
+</view>
+<view class="cu-bar bg-white solid-bottom margin-top" wx:if="{{PageCur=='index'}}">
+  <view class="action">
+    <text class="{{pomPage=='唐诗'?'active':''}}" style="margin-right: 30rpx;" catchtap="clickTang">唐诗</text><text class="icon-titles text-blue"></text><text class="{{pomPage=='宋词'?'active':''}}" catchtap="clickSong">宋词</text>
+		<text class="text-green textRight2" catchtap="prePage">上一页</text>
+		<text class="text-green textRight1" catchtap="nextPage">下一页</text>
+  </view>
+</view>
+<view class="padding bg-white {{index%2 == 0?'base':''}}" wx:for="{{pomList}}" wx:key wx:if="{{PageCur=='index'}}" wx:for-index="index">
+  <view class="text-left padding">诗词名: {{item.title}}</view>
+  <view class="text-center padding">{{item.content}}</view>
+  <view class="text-right padding">作者: {{item.authors}}</view>
+</view>
+<view class='cu-tabbar-height'></view>
+</scroll-view>
+<view class="cu-bar tabbar bg-white shadow foot">
+  <view class="action" bindtap="NavChange" data-cur="index">
+    <view class='icon-cu-image'>
+      <image src="/assets/img/index{{PageCur=='index'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='index'?'text-green':'text-gray'}}">唐诗宋词</view>
+  </view>
+  <view class="action" bindtap="NavChange" data-cur="video">
+    <view class='icon-cu-image'>
+      <image src="/assets/img/video{{PageCur=='video'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='video'?'text-green':'text-gray'}}">新闻一刻</view>
+  </view>
+  <view class="action" bindtap="NavChange" data-cur="about">
+    <view class='icon-cu-image'>
+      <image src="/assets/img/about{{PageCur=='about'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='about'?'text-green':'text-gray'}}">关于</view>
+  </view>
+</view>
+<view wx:if="{{PageCur=='index'}}" class='item foorerText' bindtap="goToTop">已到底部,点我返回顶部</view>
